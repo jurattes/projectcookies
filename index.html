@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "styles.css" rel = "stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <script defer src = "script.js"></script>
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+          <i class="bx bx-cookie"></i>
+          <h2>Cookies Consent</h2>
+        </header>
+    
+        <div class="data">
+          <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a
+              href="https://www.ey.com/en_ca/cookie-settings" target="_blank"> Read more...</a></p>
+        </div>
+    
+        <div class="buttons">
+          <button class="button" id="acceptBtn">Accept</button>
+          <button class="button" id="declineBtn">Decline</button>
+        </div>
+    </div>
+    <div class = "container">
+        <form id = "form" action = "" method = "post" novalidate>
+            <h1> Theme Selector </h1>
+            <div class = "input">
+                <label for = "color"> Custom Color: </label>
+                <input type = "color" id = "color">
+                <br>
+                <br>
+                <button type = "button" id = "btnLightMode"> Light Mode </button>
+                <button type = "button" id = "btnDarkMode"> Dark Mode </button>
+            </div>
+            <br>
+            <h1> Login Form </h1>
+            <div class = "input">
+                <label for = "username"> Username: </label>
+                <input type = "text" class = "form-control" id = "username">
+                <div class = "error"></div>
+            </div>
+            <div class = "input">
+                <label for = "password"> Password: </label>
+                <input type = "password" class = "form-control" id = "password">
+                <label class="togglePassword">
+                    <input type="checkbox" id="ToggleVisibility">
+                    <img src="Images/eye.svg" id="image1" alt="">
+                </label>
+                <div class = "error"></div>
+            </div>
+            <div class = "input"> 
+                <label for = "rememberMe"> Remember Me: </label>
+                <input type = "checkbox" id = "rememberCheck"> <br>
+                <button type = "button" id = "btnLogin"> Login </button>
+            </div>
+            <br>
+            <h1> User Preferences Storage </h1>
+            <div class = "input">
+                <label for = "language"> Language: </label>
+                <select name = "language" id = "language">
+                    <option value = "french"> French </option>
+                    <option value = "english"> English </option>
+                    <option value = "spanish"> Spanish </option>
+                    <option value = "japanese"> Japanese </option>
+                    <option value = "tagalog"> Tagalog </option>
+                    <option value = "german"> German </option>
+                </select>
+                <label for = "fontsize"> Font Size: </label>
+                <select name = "fontsize" id = "fontsize">
+                    <option value = "small"> Small </option>
+                    <option value = "medium"> Medium </option>
+                    <option value = "large"> Large </option>
+                </select>
+            </div>
+            <br>
+            <h1> Game Score Tracker </h1>
+            <div class = "tracker">
+                <p> Current Score: <div id = "currentScore"> 0 </div> </p>
+                <br>
+                <p> High Score: <div id = "highScore"> 0 </div> </p> 
+                <br>
+                <button type = "button" id = "btnPlayGame"> Play Game </button>
+                <br>
+                <br>
+                <button type = "reset" id = "btnReset"> Reset All Fields and Preferences </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

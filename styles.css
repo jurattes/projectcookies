@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.5s;
+}
+
+.container {
+    margin: auto;
+    width: 500px;
+    max-width: 90%;
+    background-color: hsla(201, 100%, 6%, 0.6);
+}
+
+.container form {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: hsla(201, 100%, 6%, 0.6);
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.3);
+}
+
+.container form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: white;
+}   
+
+.container form .form-control {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.container form #btnPlayGame,
+.container form #btnReset,
+.container form #btnLightMode,
+.container form #btnDarkMode {
+    border: none;
+    height: 20px;
+    padding: 20px;
+    outline: none;
+    background: #0000E6;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    padding-top: 5px;
+}
+
+.container form #btnLogin {
+    width: 100%;
+    height: 40px;
+    background: beige;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#currentScore,
+#highScore,
+.tracker p,
+label {
+    color: white;
+}
+
+.lightMode {
+    background-color: white;
+}
+
+.darkMode {
+    background-color: black;
+}
+
+.open-wrapper {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 50px;
+  right: -370px;
+  max-width: 345px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper.show {
+  right: 20px;
+}
+.wrapper header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+header i {
+  color: #4070f4;
+  font-size: 32px;
+}
+header h2 {
+  color: #4070f4;
+  font-weight: 500;
+}
+.wrapper .data {
+  margin-top: 16px;
+}
+.wrapper .data p {
+  color: #333;
+  font-size: 16px;
+}
+.data p a {
+  color: #4070f4;
+  text-decoration: none;
+}
+.data p a:hover {
+  text-decoration: underline;
+}
+.wrapper .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons .button {
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #4070f4;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+  transition: all 0.2s ease;
+}
+.buttons #acceptBtn:hover {
+  background-color: #034bf1;
+}
+#declineBtn {
+  border: 2px solid #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+#declineBtn:hover {
+  background-color: #4070f4;
+  color: #fff;
+}
+
+.input .error{
+    color: red;
+    font-size: 12px;
+    display: inline-flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.togglePassword input[type=checkbox] {
+  display: none;
+  cursor: pointer;
+}
+
+.togglePassword {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+
+img {
+  position: relative;
+  top: -45px;
+  right: -415px;
+}
+
+.togglePassword input:checked + img {
+  background-image: url(Images/eye-slash.svg);
+}
